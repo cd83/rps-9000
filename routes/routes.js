@@ -4,8 +4,8 @@ var appRouter = function(app){
         if(req.query.text){
             //var rpsbot = rps[getrps];
             var rpsbot = rockPaperScissorsBot();
-            //console.log(rpsbot);
-            return res.send({"text": "You chose: " + req.query.text + ", RPS Bot chose: " rpsbot})
+            console.log(rpsbot);
+            return res.send({"text": rpsbot})
             // if (rpsbot == 'rock' && req.query.text == 'scissors') {
             //     return res.send({"text": "YOU LOSE! Bot rolled ROCK!"});
             // } else if (rpsbot == 'paper' && req.query.text == 'rock') {
