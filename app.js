@@ -19,7 +19,3 @@ var rps = [
 ];
 
 var getrps = Math.floor(Math.random()*rps.length);
-
-function rockPaperScissorsBot () {
-    rpsbot = rps[getrps];
-}
