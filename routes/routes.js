@@ -1,7 +1,7 @@
 var appRouter = function(app){
     app.get("/status", function (req, res) {
         console.log("someone hit ye ole status");
-        rockPaperScissorsBot;
+        // rockPaperScissorsBot;
         if(req.query.text){
             if (rpsbot == 'rock' && req.query.text == 'scissors') {
                 return res.send({"text": "YOU LOSE! Bot rolled ROCK!"});
