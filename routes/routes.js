@@ -1,8 +1,8 @@
 var appRouter = function(app){
-    rockPaperScissorsBot;
     app.get("/status", function (req, res) {
         console.log("someone hit ye ole status");
         if(req.query.text){
+            var rpsbot = rps[getrps];
             return res.send({"text": rpsbot})
             // if (rpsbot == 'rock' && req.query.text == 'scissors') {
             //     return res.send({"text": "YOU LOSE! Bot rolled ROCK!"});
@@ -40,8 +40,6 @@ var rps = [
 ];
 
 var getrps = Math.floor(Math.random()*rps.length);
-
-var rpsbot = rps[getrps];
 
 function rockPaperScissorsBot () {
     rpsbot = rps[getrps];
