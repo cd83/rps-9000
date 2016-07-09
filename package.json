@@ -1,0 +1,26 @@
+{
+  "name": "slack-api-test",
+  "version": "1.0.0",
+  "description": "Slack API Test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeoffCraig/slack-api-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeoffCraig/slack-api-test/issues"
+  },
+  "homepage": "https://github.com/GeoffCraig/slack-api-test#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0"
+  },
+  "engines": {
+    "node": "5.9.1" 
+  }
+}
