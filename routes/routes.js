@@ -23,7 +23,7 @@ var appRouter = function(app){
         else {
             var rpsbot = rps[getrps];
             return res.send({"text": rpsbot})
-            return res.send({"text": "You gotta do 'rock', 'paper', or 'scissors', duhh."});
+            // return res.send({"text": "You gotta do 'rock', 'paper', or 'scissors', duhh."});
         }
         
         
