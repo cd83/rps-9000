@@ -4,17 +4,23 @@ var appRouter = function(app){
     app.get("/status", function (req, res) {
         console.log("someone hit ye ole status");
         if(req.query.text){
-            var rps = [
-                'rock',
-                'paper',
-                'scissors'
-            ];
-
-            var getrps = Math.floor(Math.random()*rps.length);
-
-            rpsbot = rps[getrps];
-
-            return res.send({rpsbot})
+            // var rpsbot = rps[getrps];
+            return res.send({spigot(rps)})
+            // if (rpsbot == 'rock' && req.query.text == 'scissors') {
+            //     return res.send({"text": "YOU LOSE! Bot rolled ROCK!"});
+            // } else if (rpsbot == 'paper' && req.query.text == 'rock') {
+            //     return res.send({"text": "YOU LOSE! Bot rolled PAPER!"});
+            // } else if (rpsbot == 'scissors' && req.query.text == 'paper') {
+            //     return res.send({"text": "YOU LOSE! Bot rolled SCISSORS!"});
+            // } else if (rpsbot == 'rock' && req.query.text == 'paper') {
+            //     return res.send({"text": "YOU WIN! Bot rolled ROCK!"});
+            // } else if (rpsbot == 'paper' && req.query.text == 'scissors') {
+            //     return res.send({"text": "YOU WIN! Bot rolled PAPER!"});
+            // } else if (rpsbot == 'scissors' && req.query.text == 'rock') {
+            //     return res.send({"text": "YOU WIN! Bot rolled SCISSORS!"});
+            // } else if (rpsbot == req.query.text) {
+            //     return res.send({"text": "TIE! You both rolled " + req.query.text + "!!!"})
+            // }
         }
         else {
             var rpsbot = rps[getrps];
@@ -31,7 +37,17 @@ var appRouter = function(app){
 
 }
 
+var rps = [
+    'rock',
+    'paper',
+	'scissors'
+];
 
+// var getrps = Math.floor(Math.random()*rps.length);
+
+// function rockPaperScissorsBot () {
+//     rpsbot = rps[getrps];
+// }
 
 module.exports = appRouter;
 
