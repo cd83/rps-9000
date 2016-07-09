@@ -38,9 +38,10 @@ var rps = [
 	'scissors'
 ];
 
-var getrps = Math.floor(Math.random()*rps.length); 
+var getrps = Math.floor(Math.random()*rps.length);
+var rpsbot = ""; // define blank var 
 function rockPaperScissorsBot () {
-    var rpsbot = rps[getrps];
+    rpsbot = rps[getrps];
 }
 
 module.exports = appRouter;
