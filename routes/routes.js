@@ -2,7 +2,9 @@ var appRouter = function(app){
     app.get("/status", function (req, res) {
         console.log("someone hit ye ole status");
         if(req.query.text){
-            var rpsbot = rps[getrps];
+            //var rpsbot = rps[getrps];
+            var rpsbot = rockPaperScissorsBot();
+            //console.log(rpsbot);
             return res.send({"text": rpsbot})
             // if (rpsbot == 'rock' && req.query.text == 'scissors') {
             //     return res.send({"text": "YOU LOSE! Bot rolled ROCK!"});
@@ -21,7 +23,9 @@ var appRouter = function(app){
             // }
         }
         else {
-            var rpsbot = rps[getrps];
+            //var rpsbot = rps[getrps];
+            var rpsbot = rockPaperScissorsBot();
+            console.log(rpsbot);
             return res.send({"text": rpsbot})
             // return res.send({"text": "You gotta do 'rock', 'paper', or 'scissors', duhh."});
         }
@@ -29,7 +33,7 @@ var appRouter = function(app){
         
     });
     app.get("/", function(req, res){
-        console.log("someone hit ye ole default");
+        //console.log("someone hit ye ole default");
         return res.send("Hello Meow!");
     });
 
@@ -41,10 +45,17 @@ var rps = [
 	'scissors'
 ];
 
-var getrps = Math.floor(Math.random()*rps.length);
+//var getrps = Math.floor(Math.random()*rps.length);
+//console.log (getrps);
 
 function rockPaperScissorsBot () {
-    rpsbot = rps[getrps];
+    //rpsbot = rps[getrps];
+    //var getrps = undefined
+    //getrps = Math.floor(Math.random()*rps.length);
+    //console.log (getrps);
+    //return rps[getrps]
+    //console.log(rps[Math.floor(Math.random()*rps.length)]);
+    return rps[Math.floor(Math.random()*rps.length)];
 }
 
 module.exports = appRouter;
