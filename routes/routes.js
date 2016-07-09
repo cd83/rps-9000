@@ -1,9 +1,11 @@
+var spigot = require("stream-spigot")
+
 var appRouter = function(app){
     app.get("/status", function (req, res) {
         console.log("someone hit ye ole status");
         if(req.query.text){
-            var rpsbot = rps[getrps];
-            return res.send({"text": rpsbot})
+            // var rpsbot = rps[getrps];
+            return res.send({spigot(rps)})
             // if (rpsbot == 'rock' && req.query.text == 'scissors') {
             //     return res.send({"text": "YOU LOSE! Bot rolled ROCK!"});
             // } else if (rpsbot == 'paper' && req.query.text == 'rock') {
@@ -41,10 +43,20 @@ var rps = [
 	'scissors'
 ];
 
-var getrps = Math.floor(Math.random()*rps.length);
+// var getrps = Math.floor(Math.random()*rps.length);
 
-function rockPaperScissorsBot () {
-    rpsbot = rps[getrps];
-}
+// function rockPaperScissorsBot () {
+//     rpsbot = rps[getrps];
+// }
 
 module.exports = appRouter;
+
+module.exports = function() {
+  return rps[Math.floor(Math.random() * rps.length)]
+}
+
+module.exports.rps = rps
+
+module.exports.rpsStream = function() {
+  return spigot(rps)
+}
