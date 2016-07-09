@@ -5,33 +5,32 @@ var appRouter = function(app){
             //var rpsbot = rps[getrps];
             var rpsbot = rockPaperScissorsBot();
             console.log(rpsbot);
-            var sendbacktext = "You chose " + req.query.text + ", RPS Bot chose " + rpsbot
+            var sendbacktext = "You chose " + req.query.text + ", RPS Bot chose " + rpsbot;
             if (rpsbot == 'rock' && req.query.text == 'scissors') {
-                var sendbacktext = "YOU LOSE! You chose " + req.query.text + ", RPS Bot chose " + rpsbot
+                var sendbacktext = "YOU LOSE! You chose " + req.query.text + ", RPS Bot chose " + rpsbot;
             } else if (rpsbot == 'paper' && req.query.text == 'rock') {
-                var sendbacktext = "YOU LOSE! You chose " + req.query.text + ", RPS Bot chose " + rpsbot
+                var sendbacktext = "YOU LOSE! You chose " + req.query.text + ", RPS Bot chose " + rpsbot;
             } else if (rpsbot == 'scissors' && req.query.text == 'paper') {
-                var sendbacktext = "YOU LOSE! You chose " + req.query.text + ", RPS Bot chose " + rpsbot
+                var sendbacktext = "YOU LOSE! You chose " + req.query.text + ", RPS Bot chose " + rpsbot;
             } else if (rpsbot == 'rock' && req.query.text == 'paper') {
-                var sendbacktext = "YOU WIN! You chose " + req.query.text + ", RPS Bot chose " + rpsbot
+                var sendbacktext = "YOU WIN! You chose " + req.query.text + ", RPS Bot chose " + rpsbot;
             } else if (rpsbot == 'paper' && req.query.text == 'scissors') {
-                var sendbacktext = "YOU WIN! You chose " + req.query.text + ", RPS Bot chose " + rpsbot
+                var sendbacktext = "YOU WIN! You chose " + req.query.text + ", RPS Bot chose " + rpsbot;
             } else if (rpsbot == 'scissors' && req.query.text == 'rock') {
-                var sendbacktext = "YOU WIN! You chose " + req.query.text + ", RPS Bot chose " + rpsbot
+                var sendbacktext = "YOU WIN! You chose " + req.query.text + ", RPS Bot chose " + rpsbot;
             } else if (rpsbot == req.query.text) {
                 return res.send({"text": "TIE! You both rolled " + req.query.text + "!!!"})
             } else {
-                var sendbacktext = "You gotta enter 'rock', 'paper', or 'scissors' duhh"
+                var sendbacktext = "You gotta enter 'rock', 'paper', or 'scissors' duhh";
             }
-            return res.send({"text": sendbacktext})
+            return res.send({"text": sendbacktext});
         }
         else {
             //var rpsbot = rps[getrps];
             var rpsbot = rockPaperScissorsBot();
             console.log(rpsbot);
-            return res.send({"text": rpsbot})
-            // return res.send({"text": "You gotta do 'rock', 'paper', or 'scissors', duhh."});
-
+            var sendbacktext = "You gotta enter 'rock', 'paper', or 'scissors' duhh";
+            return res.send({"text": sendbacktext});
         }
         
         
