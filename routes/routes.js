@@ -28,6 +28,7 @@ var appRouter = function(app){
             console.log(rpsbot);
             return res.send({"text": rpsbot})
             // return res.send({"text": "You gotta do 'rock', 'paper', or 'scissors', duhh."});
+
         }
         
         

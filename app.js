@@ -11,15 +11,3 @@ var routes = require("./routes/routes.js")(app);
 var server = app.listen(port, function(){
     console.log("Listening on port %s...", server.address().port);
 });
-
-var rps = [
-    'rock',
-    'paper',
-	'scissors'
-];
-
-var getrps = Math.floor(Math.random()*rps.length);
-
-function rockPaperScissorsBot () {
-    rpsbot = rps[getrps];
-}
