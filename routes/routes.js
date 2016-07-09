@@ -39,9 +39,9 @@ var rps = [
 	'scissors'
 ];
 
-var rpsbot = "string"; // define blank var 
-
 var getrps = Math.floor(Math.random()*rps.length);
+
+var rpsbot = rps[getrps];
 
 function rockPaperScissorsBot () {
     rpsbot = rps[getrps];
