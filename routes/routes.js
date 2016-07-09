@@ -21,7 +21,7 @@ var appRouter = function(app){
             } else if (rpsbot == req.query.text) {
                 return res.send({"text": "TIE! You both rolled " + req.query.text + "!!!"})
             } else {
-                var sendbacktext = "You gotta enter 'rock', 'paper', or 'scissors' duhh";
+                var sendbacktext = "You gotta enter '/rps rock', '/rps paper', or '/rps scissors' duhh";
             }
             return res.send({"text": sendbacktext});
         }
@@ -29,7 +29,7 @@ var appRouter = function(app){
             //var rpsbot = rps[getrps];
             var rpsbot = rockPaperScissorsBot();
             console.log(rpsbot);
-            var sendbacktext = "You gotta enter 'rock', 'paper', or 'scissors' duhh";
+            var sendbacktext = "You gotta enter '/rps rock', '/rps paper', or '/rps scissors' duhh";
             return res.send({"text": sendbacktext});
         }
         
