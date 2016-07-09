@@ -20,7 +20,7 @@ var appRouter = function(app){
             }
         }
         else {
-            return res.send({"text": "You gotta do 'rock', 'paper', or 'scissors', duhh." + req.query.text});
+            return res.send({"text": "You gotta do 'rock', 'paper', or 'scissors', duhh."});
         }
         
         
